@@ -4,7 +4,8 @@
   "description": "This the backend for personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node app.js"
+    "dev": "nodemon --exec babel-node app.js",
+    "start": "node --exec babel-node app.js"
   },
   "author": "",
   "license": "ISC",
