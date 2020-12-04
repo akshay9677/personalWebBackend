@@ -4,9 +4,11 @@
   "description": "This the backend for personal website",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node app.js",
-    "start": "npm run build && node dist/index.js",
-    "build": "babel lib -d dist"
+    "dev": "nodemon --exec babel-node src/app.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +22,7 @@
     "mongoose": "^5.11.3"
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.8",
     "@babel/core": "^7.12.9",
     "@babel/node": "^7.12.6",
     "@babel/preset-env": "^7.12.7",

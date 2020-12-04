@@ -5,7 +5,7 @@ import { connectDB } from "./config/db";
 import Users from "./models/Users.model";
 import Likes from "./models/Likes.model";
 
-dotenv.config({ path: "./config/config.env" });
+dotenv.config({ path: "./src/config/config.env" });
 connectDB();
 const app = express();
 
