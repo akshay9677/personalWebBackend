@@ -94,9 +94,9 @@ app.get("/api/v1/blog", async (req, res, next) => {
 
 app.post("/api/v1/blog", async (req, res, next) => {
   try {
-    let { email, subject, post } = req.body;
+    let { email, subject, post, tags } = req.body;
 
-    let newPost = { email, subject, post };
+    let newPost = { email, subject, post, tags };
     newPost.sysCreatedTime = new Date().getTime();
     newPost.likes = 0;
     newPost.tags = newPost.tags ? newPost.tags : [];
